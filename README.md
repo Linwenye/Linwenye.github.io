@@ -1,177 +1,98 @@
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/Mighil)
+## Phantom for Jekyll
 
-# SparrowX - Jekyll Netlify CMS Boilerplate
+A minimalist, responsive portfolio theme for [Jekyll](http://jekyllrb.com/) with Bootstrap.
 
-A clean minimal Jekyll theme for SEO-focused writers. The theme loads fast and it's Netlify CMS-ready. SparrowX is a remix of sparrow by [lingxz](https://github.com/lingxz/sparrow).
+![preview](preview.jpg)
 
-[Live Demo](https://sparrowx.netlify.app)
+[See it in action](http://jamigibbs.github.io/phantom/).
 
-- [Features](#features)
-- [Install](#install)
-- [Up and running with Netlify CMS](#up-and-running-with-netlify-cms)
-    - [General configuration](#general-configuration)
-    - [Disqus](#disqus)
-    - [Google analytics](#google-analytics)
-    - [Collections](#collections)
-    - [Pagination](#pagination)
-    - [Navigation](#navigation)
-    - [Front matter defaults](#front-matter-defaults)
-    - [Other](#other)
-- [Credits](#credits)
+## Fancy using it for your own site?
 
-## Screenshot 
+Here are some steps to get you started:
 
-![](screenshot.png)
+1. Clone this repo and cd into the directory:
 
-## Website Speed Test 
+  ```bash
+  git clone https://github.com/jamigibbs/phantom.git your-dir-name && cd your-dir-name
+  ```
 
-![](pagespeed.png)
+2. Run:
 
-## Original Sparrow Features
+  ```bash
+  gem install bundler
+  bundle install
+  bundle exec jekyll serve
+  ```
 
-- Fully compatible with Github Pages
-- Configurable and responsive multi layer menu, adapted from [slimmenu](https://github.com/adnantopal/slimmenu)
-- Disqus integration
-- [Font Awesome icons](http://fontawesome.io/) included
-- Google analytics
-- Social sharing using [rrssb](https://www.rrssb.ml/)
-- 404 page included
-- Atom feed generated with [jekyll-feed](https://github.com/jekyll/jekyll-feed)
-- Pagination enabled for blog using [jekyll-paginate](https://github.com/jekyll/jekyll-paginate)
-- Basic SEO with Facebook Open Graph tags and Twitter cards
+  You may need to append your commands with `sudo` if you're getting a permissions error.
 
-## SparrowX Features
+  _Don't have Jekyll yet? [Get `er installed then!](http://jekyllrb.com/docs/installation/)_
 
--  Fully compatible with Netlify CMS (one-click setup).
--  Added new custom variables like updated, headerimage, feature-img, sitemap and tag.
--  The theme renders system font-stack.
--  Compressed JS.
--  Improved load time and reduced file requests.
--  _redirects feature
+3. Visit in your browser at:
 
-## Install
+  `http://127.0.0.1:4000`
 
-Just fork this repo and replace the posts with your own. Also rename the sample poetry collection to replace it with your own collection, or just delete it if you don't need to use collections. The example is poetry, but you can easily revamp this into essays, short stories, portfolio, or whatever your creative work is. 
+## Launching with Github Pages :rocket:
 
+Jekyll + Github pages is a marriage made in heaven. You can [use your own custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) or use the default Github url (ie. http://username.github.io/repository) and not bother messing around with DNS settings.
 
-## Up and running with Netlify CMS
-
-[Click here](https://sparrowx.netlify.app/netlify-cms-jekyll-setup) to read the documentation for Netlify CMS.
-
-For customization, see below. 
-
-### General configuration
-
-Customize these values in the `_config.yml` file: 
-
-```yaml
-title                    : "SparrowX"
-description              : "A clean minimal Jekyll theme for SEO-focused writers."
-favicon                  : "/assets/images/image.png" # You can use base64 encoded images.
-url                      : "https://sparrowx.m1q.net" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog" leave blank if no subpath
-
-# Site Author
-author:
-  name                   : "Mighil" # appears in the footer and atom feed
-```
-
-
-### Disqus
-
-To activate Disqus, fill in your disqus shortname: 
-
-```yaml
-comments                 : true # set it to false to disable comments
-disqus:
-  shortname              : your_shortname
-```
-
-### Google analytics
-
-Enable google analytics by filling in your tracking ID: 
-
-```yaml
-analytics:
-  google:
-    tracking_id          : # add your google tracking id here
-```
-
-### Collections
-
-If you are using collections, be sure to replace this with your collection name: 
-
-```yaml
-collections:
-  poetry:
-    output: true
-    permalink: /:collection/:title/
-```
-
-### Pagination
-
-Currently, pagination is set to a the blog page. Unfortunately Jekyll does not yet support pagination on multiple pages. 
-
-If you want to paginate on a different page, simply change the `paginate_path` value in the config file and create the relevant page. 
-
-```yaml
-paginate: 5 # amount of posts to show
-paginate_path: "/blog/page:num/"
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-```
+## Theme Features
 
 ### Navigation
 
-You can change the navigation links in `_data/navigation.yml`.
-
-### Front matter defaults
-
-At the bottom of the config file, you can also set [front matter defaults](https://jekyllrb.com/docs/configuration/#front-matter-defaults) so that you don't have to repeat the same front matter for every post. This is an example: 
+Navigation can be customized in `_config.yml` under the `nav_item` key. Default settings:
 
 ```yaml
-# Front matter defaults
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: page
-      comments: false
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      comments: true
-      share: true
-  # _poetry
-  - scope:
-      path: ""
-      type: poetry
-    values:
-      layout: post
-      share: false
+nav_item:
+    - { url: '/', text: 'Home' }
+    - { url: '/about', text: 'About' }
 ```
 
-### How tags work
+Set the `nav_enable` variable to false in `_config.yml` to disable navigation.
 
-You should create specific .md files within ```/tag/``` before using the variable.
+### Contact Form
 
-### Other
+You can display a contact form within the modal window template. This template is already setup to use the [Formspree](https://formspree.io) email system. You'll just want to add your email address to the form in `/_includes/contact-modal.html`.
 
-To enhance SEO, you can add your twitter username to `_config.yml`. 
+Place the modal window template in any place you'd like the user to click for the contact form.
+The template will display a link to click for the contact form modal window:
 
-You can also add an image path for the `og_image` value in the config file, for a default open graph sharing image. This value can be overridden in individual posts by using **headerimage** variable. 
+```liquid
+{% include contact.html %}
+{% include contact-modal.html %}
+```
 
-Your default image Netlify CMS uploads will go to /images/.
+### Animation Effects
 
-For the various config options see the [sample config file for the demo site](https://github.com/mighildotcom/sparrowx/blob/master/_config.yml)
+Animations with CSS classes are baked into the theme. To animate a section or element, simply add the animation classes:
 
-The color schemes and fonts can also be customized through scss, by editing the relevant variable in `_variables.scss`. 
+```html
+<div id="about-me" class="wow fadeIn">
+  I'm the coolest!
+</div>
+```
 
-## Credits
+For a complete list of animations, see the [animation list](http://daneden.github.io/animate.css/).
 
-- Base theme sparrow by [lingxz](https://github.com/lingxz/sparrow)
-- Icon made by [Freepik](https://www.freepik.com/) from www.flaticon.com 
+### Pagination
+
+By default, pagination on the home page will activate after 10 posts. You can change this within `_config.yml`. You can add the pagination to other layouts with:
+
+```liquid
+  {% for post in paginator.posts %}
+    {% include post-content.html %}
+  {% endfor %}
+
+  {% include pagination.html %}
+```
+
+Read more about the [pagination plugin](http://jekyllrb.com/docs/pagination/).
+
+## Credit
+
+* Bootstrap, http://getbootstrap.com/, (C) 2011 - 2016 Twitter, Inc., [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+* Wow, https://github.com/matthieua/WOW, (C) 2014 - 2016 Matthieu Aussaguel
+, [GPL](https://github.com/matthieua/WOW#open-source-license)
+
+* Animate.css, https://github.com/daneden/animate.css, (C) 2016 Daniel Eden, [MIT](https://github.com/daneden/animate.css/blob/master/LICENSE)
