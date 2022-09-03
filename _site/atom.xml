@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Jami Gibbs</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2022-09-04T01:41:22+08:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Jami Gibbs</name>
+   <email>jami0821@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Tree-Supervised Auxiliary Online Knowledge Distillation.</title>
+   <link href="http://localhost:4000/2022/09/03/tsa/"/>
+   <updated>2022-09-03T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2022/09/03/tsa</id>
+   <content type="html">&lt;p&gt;We design tree-structured auxiliary (TSA) online knowledge distillation to perform one-stage distillation when the teacher is unavailable. With TSA, we gain an average of 3% to 4% improvement in accuracy on CIFAR-100. On ImageNet, ResNet-34 obtains 74.97% accuracy, which is 1.8% above the vanilla one. On IWSLT translation tasks, we gain an average of 0.9 BLEU improvement over vanilla Transformer for three datasets.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Efficient Structured Knowledge Distillation.</title>
+   <link href="http://localhost:4000/2022/09/03/efficient/"/>
+   <updated>2022-09-03T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2022/09/03/efficient</id>
+   <content type="html">&lt;p&gt;Performing knowledge distillation for structured prediction models models is not trivial due to their exponentially large output space. In this work, we propose an approach that is much simpler in its formulation and far more efficient for training than existing approaches. Specifically, we transfer the knowledge from a teacher model to its student model by locally matching their predictions on all sub-structures, instead of the whole output space.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
