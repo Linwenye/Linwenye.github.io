@@ -11,7 +11,7 @@ Here are some steps to get you started for local development:
 
 2. Run Jekyll:
 
-  `jekyll serve --watch`
+  `bundle exec jekyll serve --watch`
 
   _[Don't have Jekyll yet? ](http://jekyllrb.com/docs/installation/)_
 

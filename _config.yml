@@ -2,9 +2,9 @@
 permalink:           pretty
 
 # Setup
-title:               Jami Gibbs
-tagline:             Software Developer from Chicago.
-url:                 http://jamigibbs.com
+title:               Wenye Lin
+tagline:             Graduate Student From Tsinghua University. 
+url:                 https://linwenye.github.io/
 paginate:            1
 baseurl:             ""
 
@@ -17,18 +17,18 @@ sass:
 
 # About/contact
 author:
-  name:              Jami Gibbs
+  name:              Wenye Lin
   url:               https://twitter.com/jamigibbs
-  email:             jami0821@gmail.com
+  email:             lwy20@mails.tsinghua.edu.cn
 
 # Custom vars
 version:             2.0.1
 github:
-  repo:              https://github.com/jamigibbs/portfolio
+  repo:              https://github.com/Linwenye/portfolio
 google_analytics:    UA-3363703-15
-twitter:             jamigibbs
-github:              jamigibbs
-dribbble:            jamigibbs
+twitter:             Wenye Lin
+github:              Wenye Lin
+dribbble:            Wenye Lin
 
 # Gems
 plugins:
