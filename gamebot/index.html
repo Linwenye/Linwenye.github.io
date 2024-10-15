@@ -25,7 +25,7 @@
 
 
     <title>GAMEBOT: Gaming Arena for Model Evaluation - Battle of Tactics</title>
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="static/images/gamebot.ico">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
 
@@ -52,7 +52,10 @@
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered">
+
                 <div class="column has-text-centered">
+                    <div class="publication-logo">
+                        <img src="static/images/coolerbot_nobg.png" alt="GAMEBOT" style="width: 300px; height: 300px; ">
                     <h1 class="title is-1 publication-title">GAMEBOT: Gaming Arena for Model Evaluation - Battle of
                         Tactics</h1>
                     <div class="is-size-5 publication-authors">
@@ -128,7 +131,9 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 </section>
@@ -152,6 +157,35 @@
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <div class="columns is-centered has-text-centered">
+
+            <div class="column is-four-fifths"><h2 class="title is-3">Introduction</h2>
+                <div class="content has-text-justified"><p class="c18"><span class="c9">Introducing </span><strong>GAMEBOT</strong><span
+                        class="c0">: a benchmark evaluating LLM reasoning in competitive gaming environments. It decomposes complex reasoning in games into modular subproblems, targeting abilities like rule understanding and strategy instruction following. We develop Chain-of-Thought (CoT) prompts that leverage domain knowledge to guide LLMs and automatically validate their intermediate reasoning steps against ground truth. It has the following properties:</span>
+                </p>
+                    <p class="c10"><span class="c0"></span></p>
+                    <ul class="c28 lst-kix_r92srvgun7j-0 start">
+                        <li class="c18 c29 li-bullet-0"><span class="c0"><strong>Mitigation of Data Contamination:</strong> Rather than evaluation on a predefined dataset, we evaluate LLMs in interactive gaming environments, whereas game states are across a wide spectrum depending on specific actions received and randomness. </span>
+                        </li>
+                        <li class="c18 c29 li-bullet-0"><span class="c0"><strong>Legibility:</strong> Our benchmark offers assessments on not only the quality of final decisions but also the intermediate thoughts, giving insights for improving the training or inference of LLMs.</span>
+                        </li>
+                        <li class="c18 c29 li-bullet-0"><span class="c0"><strong>Difficulty:</strong> The games are challenging enough to differentiate between top-performing models. Even for GPT-4o, the score of intermediate results is only 0.52 (out of 1).</span>
+                        </li>
+                        <li class="c18 c29 li-bullet-0"><span class="c0"><strong>Stronger Baselines:</strong> The prompts presented in this work can serve as valuable CoT baselines for future research exploring advanced prompting techniques like auto-prompting and reflection.</span>
+                    </ul>
+<!--                    <p class="c18"><span class="c9"><strong>We will evaluate your model on LiveBench!</strong> Open a <a-->
+<!--                            href="https://github.com/LiveBench/LiveBench/issues" target="_blank" rel="noreferrer">github issue</a> or email us at <a-->
+<!--                            href="mailto:livebench.ai@gmail.com" target="_blank"-->
+<!--                            rel="noreferrer">livebench.ai@gmail.com</a>!</span></p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--<section class="section hero is-light">-->
 <!--  <div class="container is-max-desktop">-->
 <!--    <div class="columns is-centered has-text-centered">-->
@@ -242,25 +276,25 @@
 
 
 <!-- Video carousel -->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <h2 class="title is-3">Another Carousel</h2>-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--        <div class="item item-video1">-->
-<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel1.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video2">-->
-<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel2.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop width="300">
+            <!-- Your video file here -->
+            <source src="static/videos/claude-3-5-sonnet@20240620_vs_gpt-4o-episode-0.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop width="300">
+            <!-- Your video file here -->
+            <source src="static/videos/meta-llama3-405b-instruct-maas_vs_gpt-4o-mini-episode-0.mp4"
+            type="video/mp4">
+          </video>
+        </div>
 <!--        <div class="item item-video3">-->
 <!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
 <!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
@@ -268,10 +302,10 @@
 <!--            type="video/mp4">-->
 <!--          </video>-->
 <!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+      </div>
+    </div>
+  </div>
+</section>
 <!-- End video carousel -->
 
 
@@ -298,32 +332,7 @@
 <!--        </div>-->
 <!--    </div>-->
 <!--</section>-->
-<section class="section">
-    <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths"><h2 class="title is-3">Introduction</h2>
-                <div class="content has-text-justified"><p class="c18"><span class="c9">Introducing </span><strong>GAMEBOT</strong><span
-                        class="c0">: a benchmark evaluating LLM reasoning in competitive gaming environments. It decomposes complex reasoning in games into modular subproblems, targeting abilities like rule understanding and strategy instruction following. We develop Chain-of-Thought (CoT) prompts that leverage domain knowledge to guide LLMs and automatically validate their intermediate reasoning steps against ground truth. It has the following properties:</span>
-                </p>
-                    <p class="c10"><span class="c0"></span></p>
-                    <ul class="c28 lst-kix_r92srvgun7j-0 start">
-                        <li class="c18 c29 li-bullet-0"><span class="c0"><strong>Mitigation of Data Contamination:</strong> Rather than evaluation on a predefined dataset, we evaluate LLMs in interactive gaming environments, whereas game states are across a wide spectrum depending on specific actions received and randomness. </span>
-                        </li>
-                        <li class="c18 c29 li-bullet-0"><span class="c0"><strong>Legibility:</strong> Our benchmark offers assessments on not only the quality of final decisions but also the intermediate thoughts, giving insights for improving the training or inference of LLMs.</span>
-                        </li>
-                        <li class="c18 c29 li-bullet-0"><span class="c0"><strong>Difficulty:</strong> The games are challenging enough to differentiate between top-performing models. Even for GPT-4o, the score of intermediate results is only 0.52 (out of 1).</span>
-                        </li>
-                        <li class="c18 c29 li-bullet-0"><span class="c0"><strong>Stronger Baselines:</strong> The prompts presented in this work can serve as valuable CoT baselines for future research exploring advanced prompting techniques like auto-prompting and reflection.</span>
-                    </ul>
-<!--                    <p class="c18"><span class="c9"><strong>We will evaluate your model on LiveBench!</strong> Open a <a-->
-<!--                            href="https://github.com/LiveBench/LiveBench/issues" target="_blank" rel="noreferrer">github issue</a> or email us at <a-->
-<!--                            href="mailto:livebench.ai@gmail.com" target="_blank"-->
-<!--                            rel="noreferrer">livebench.ai@gmail.com</a>!</span></p>-->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!--Leaderboard -->
 <section class="section">
