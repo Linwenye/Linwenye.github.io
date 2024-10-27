@@ -36,7 +36,7 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="static/css/index.css">
-
+    <link rel="stylesheet" href="static/css/bargaining.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
     <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -44,6 +44,7 @@
     <script src="static/js/bulma-slider.min.js"></script>
     <script src="static/js/index.js"></script>
     <script src="static/js/sort_panel.js"></script>
+
 </head>
 <body>
 
@@ -213,16 +214,80 @@
     <div class="hero-head">
         <h2 class="title is-2 has-text-centered">Involved Tasks</h2>
     </div>
-<!--    Surround-->
+    <!--  Othello -->
     <div class="hero-body">
         <div class="container">
             <div class="columns is-vcentered">
                 <div class="column is-4 is-offset-2">
                     <h2 class="title is-3">
-                        Task 1: Surround
+                        Task 1: Othello
                     </h2>
                     <h2 class="subtitle is-5 mt-2">
-                        Surround is a two-player game where players control a continuously moving line. The goal is to force the opponent to collide with the wall, or the growing trail of either player. It highlights spatial reasoning and strategic blocking.
+                        Othello (Reversi) is a board game played on an 8x8 board. Two players take turns placing discs,
+                        attempting to capture their opponent's discs by sandwiching them between
+                        their own. The captured discs would be flipped to the player's color. Who has the majority of
+                        pieces at the end of the game wins. The game
+                        emphasizes strategic placement and tactical maneuvering to control the board.
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2">
+                        <strong>Required Abilities: Spatial Reasoning; Positional Evaluation</strong>
+                    </h2>
+                </div>
+                <div class="column is-6 has-text-centered">
+                    <video id="video1" autoplay controls muted loop width="340" height="340">
+                        <source src="static/videos/othello_game.mp4"
+                                type="video/mp4">
+
+                    </video>
+                    <h2 class="subtitle is-5 mt-1">
+                        gpt-4o (black) vs llama3.1-405b-instruct (white)
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--    Pong-->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+
+                <div class="column is-5 is-offset-1 has-text-centered">
+                    <video poster="" id="video2" autoplay controls muted loop width="300" height="200">
+                        <source src="static/videos/meta-llama3-405b-instruct-maas_vs_gpt-4o-mini-episode-0.mp4"
+                                type="video/mp4">
+                    </video>
+                    <h2 class="subtitle is-5 mt-1">
+                        llama3.1-405b (right) vs gpt-4o-mini (left)
+                    </h2>
+                </div>
+                <div class="column is-4 is-offset-1">
+                    <h2 class="title is-3">
+                        Task 2: Pong
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2">
+                        Pong is a classic two-player arcade game simulating table tennis. Players control paddles to hit
+                        a ball back and forth, aiming to score points by making the opponent miss. It represents a
+                        simplified environment with continuous action spaces.
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2"><strong>Required Abilities: Mathematical Reasoning</strong></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Surround-->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-4 is-offset-2">
+                    <h2 class="title is-3">
+                        Task 3: Surround
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2">
+                        Surround is a two-player game where players control a continuously moving line. The goal is to
+                        force the opponent to collide with the wall, or the growing trail of either player. It
+                        highlights spatial reasoning and strategic blocking.
                     </h2>
                     <h2 class="subtitle is-5 mt-2">
                         <strong>Required Abilities: Long-Context Information Extraction; Long-Term Planning</strong>
@@ -242,42 +307,49 @@
             </div>
         </div>
     </div>
-<!--    Pong-->
+    <!--    Checkers-->
     <div class="hero-body">
         <div class="container">
             <div class="columns is-vcentered">
 
                 <div class="column is-5 is-offset-1 has-text-centered">
-                    <video poster="" id="video2" autoplay controls muted loop width="300" height="200">
-                        <source src="static/videos/meta-llama3-405b-instruct-maas_vs_gpt-4o-mini-episode-0.mp4"
+                    <video poster="" id="video2" autoplay controls muted loop width="340" height="340">
+                        <source src="static/videos/checkers_game.mp4"
                                 type="video/mp4">
                     </video>
                     <h2 class="subtitle is-5 mt-1">
-                        llama3-405b (right) vs gpt-4o-mini (left)
+                        gemini-1.5-pro-preview (black) vs jamba-1.5-large (white)
                     </h2>
                 </div>
                 <div class="column is-4 is-offset-1">
                     <h2 class="title is-3">
-                        Task 2: Pong
+                        Task 4: Checkers
                     </h2>
                     <h2 class="subtitle is-5 mt-2">
-                        Pong is a classic two-player arcade game simulating table tennis. Players control paddles to hit a ball back and forth, aiming to score points by making the opponent miss. It represents a simplified environment with continuous action spaces.
+                        Checkers is a board game where players move their pieces diagonally, capturing opponent pieces
+                        by jumping over them. Regular pieces can only move forward, while "kings," earned by reaching
+                        the opponent's back rank, can move and capture both forwards and backward. The game ends when
+                        one player has captured all of their opponent's pieces or has blocked their opponent's pieces.
+                        It involves strategic planning and tactical piece advancement.
                     </h2>
-                    <h2 class="subtitle is-5 mt-2"><strong>Required Abilities: Mathematical Reasoning</strong></h2>
+                    <h2 class="subtitle is-5 mt-2"><strong>Required Abilities: Spatial Reasoning; Game Board
+                        Understanding</strong></h2>
                 </div>
             </div>
         </div>
     </div>
-<!--    TicTacToe-->
-       <div class="hero-body">
+    <!--    TicTacToe-->
+    <div class="hero-body">
         <div class="container">
             <div class="columns is-vcentered">
                 <div class="column is-4 is-offset-2">
                     <h2 class="title is-3">
-                        Task 3: TicTacToe
+                        Task 5: TicTacToe
                     </h2>
                     <h2 class="subtitle is-5 mt-2">
-                        Tic-Tac-Toe is a simple two-player game played on a 3x3 grid. Players take turns marking a square with their respective symbol, aiming to create a line of three symbols horizontally, vertically, or diagonally. Its simplicity makes it useful for a lightweight evaluation for LLMs.
+                        Tic-Tac-Toe is a simple two-player game played on a 3x3 grid. Players take turns marking a
+                        square with their respective symbol, aiming to create a line of three symbols horizontally,
+                        vertically, or diagonally. Its simplicity makes it useful for a lightweight evaluation for LLMs.
                     </h2>
                     <h2 class="subtitle is-5 mt-2">
                         <strong>Required Abilities: Pattern Recognition; Game Board Understanding</strong>
@@ -285,15 +357,109 @@
                 </div>
                 <div class="column is-6 has-text-centered">
                     <video id="video1" autoplay controls muted loop width="300" height="300">
-                        <source src="static/videos/claude-3-5-sonnet@20240620_vs_gpt-4o-episode-0.mp4"
+                        <source src="static/videos/tictactoe_game.mp4"
                                 type="video/mp4">
 
                     </video>
                     <h2 class="subtitle is-5 mt-1">
-                        claude-3-5-sonnet (right) vs gpt-4o (left)
+                        gemini-1.5-pro-preview (X) vs llama3.1-70b-instruct (O)
                     </h2>
                 </div>
 
+            </div>
+        </div>
+    </div>
+    <!--Connect4-->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+
+                <div class="column is-5 is-offset-1 has-text-centered">
+                    <video autoplay controls muted loop width="350">
+                        <source src="static/videos/connect4_game.mp4"
+                                type="video/mp4">
+                    </video>
+                    <h2 class="subtitle is-5 mt-1">
+                        claude-3-5-sonnet (yellow) vs gpt-4o-mini (red)
+                    </h2>
+                </div>
+                <div class="column is-4 is-offset-1">
+                    <h2 class="title is-3">
+                        Task 6: Connect4
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2">
+                        Connect Four is a two-player connection game played on a vertically suspended 6x7 grid. Players
+                        drop colored discs into columns, aiming to connect four of their own discs horizontally,
+                        vertically, or diagonally. It involves strategic thinking and anticipating opponent moves.
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2"><strong>Required Abilities: Pattern Recognition; Game Board
+                        Understanding</strong></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Texas-->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-4 is-offset-2">
+                    <h2 class="title is-3">
+                        Task 7: Texas Hold'em
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2">
+                        Texas Hold'em involves betting, bluffing, and incomplete
+                        information. Players receive two private cards and share five community cards, forming the best
+                        possible five-card hand. Multiple betting rounds occur throughout the hand, allowing players to
+                        bet strategically based on the strength of their hand and their assessment of their opponents'
+                        hands. The player with the best hand at the showdown, or the last remaining player after all
+                        others have folded, wins the pot.
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2">
+                        <strong>Required Abilities: Risk Management; Bluffing; Hand analysis</strong>
+                    </h2>
+                </div>
+                <div class="column is-6 has-text-centered">
+                    <video id="video1" autoplay controls muted loop width="400">
+                        <source src="static/videos/poker_game.mp4"
+                                type="video/mp4">
+
+                    </video>
+                    <h2 class="subtitle is-5 mt-1">
+                        gpt4-1106 vs claude-3-sonnet
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Bargaining-->
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+
+                <div class="column is-5 is-offset-1 has-text-centered">
+
+                    <video autoplay controls muted loop width="450">
+                        <source src="static/videos/bargain-game.mov"
+                                type="video/mp4">
+                    <h2 class="subtitle is-5 mt-1">
+                        gpt-4o (P1) vs gemini-1.5-pro-preview (P2)
+                    </h2>
+                </div>
+                <div class="column is-4 is-offset-1">
+                    <h2 class="title is-3">
+                        Task 8: Bargaining
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2">
+                        Bargaining is a game where two players negotiate to divide a set of items, each holding a
+                        private valuation for each item. Players negotiate to maximize their individual total value
+                        acquired. After 8 rounds of bargaining, the game has a 20% chance of ending in each subsequent
+                        round. If no agreement is reached before the game's forced termination, both players receive a
+                        reward of 0.
+                    </h2>
+                    <h2 class="subtitle is-5 mt-2"><strong>Required Abilities: Collaboration in Competition; Opponent
+                        Modeling; Mathematical Reasoning </strong></h2>
+                </div>
             </div>
         </div>
     </div>
@@ -351,11 +517,12 @@
 <!--&lt;!&ndash;End paper poster &ndash;&gt;-->
 
 
-
 <!--Leaderboard -->
 <section class="section">
     <div class="column has-text-centered">
-        <h2 class="title is-2" style="margin-bottom: 20px">Leaderboard</h2>
+        <h2 class="title is-2 mb-4">Leaderboard</h2>
+        <p class="content">(Note: You can click the button for sorting)</p>
+
     </div>
     <div class="container">
         <table id="leaderboardTable">
@@ -634,11 +801,8 @@
     </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-<!-- End of Statcounter Code -->
-
+<!-- Load React -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="static/js/bargaining-game.js"></script>
 </body>
 </html>
